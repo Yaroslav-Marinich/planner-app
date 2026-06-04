@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context'; 
+import { ThemeProvider } from './src/providers/ThemeProvider';
+import { LoaderProvider } from './src/providers/LoaderProvider';
+import { CustomAlertProvider } from './src/providers/CustomAlertProvider';
+import { SyncQueueProvider } from './src/providers/SyncQueueProvider';
+import { DataProvider } from './src/providers/DataProvider';
+
+import TabNavigator from './src/navigation/TabNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+<GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <LoaderProvider>
+            <CustomAlertProvider>
+              <SyncQueueProvider>
+                <DataProvider>
+                  
+                  <NavigationContainer>
+                    <TabNavigator />
+                  </NavigationContainer>
+
+                </DataProvider>
+              </SyncQueueProvider>
+            </CustomAlertProvider>
+          </LoaderProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
