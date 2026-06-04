@@ -1,0 +1,30 @@
+# Залежності
+node_modules/
+
+# Збірка TypeScript
+dist/
+
+# Змінні оточення (паролі, посилання на БД)
+.env
+
+# Ключі Firebase (КРИТИЧНО ВАЖЛИВО!)
+serviceAccountKey.json
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Налаштування редакторів/ОС
+.vscode/
+.idea/
+.DS_Store
+
+backend/node_modules/
+frontend/node_modules/
+backend/.env
+backend/serviceAccountKey.json.json
+.expo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
