@@ -8,7 +8,9 @@ import { useTheme } from '../providers/ThemeProvider';
 import DashboardScreen from '../screens/Dashboard/DashboardScreen';
 import RecipesScreen from '../screens/RecipesScreen/RecipesScreen'; 
 import ShoppingListsScreen from '../screens/ShoppingListsScreen/ShoppingListsScreen';
+import ShoppingListDetailScreen from '../screens/ShoppingListDetailScreen/ShoppingListDetailScreen';
 import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
+import InventoryScreen from '../screens/InventoryScreen/InventoryScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +32,8 @@ export default function TabNavigator() {
             iconName = focused ? 'cart' : 'cart-outline';
           } else if (route.name === 'Профіль') {
             iconName = focused ? 'person' : 'person-outline';
+          } else if (route.name === 'Склад') {
+            iconName = focused ? 'cube' : 'cube-outline';
           }
 
           return <Ionicons name={iconName} size={28} color={color} />;
@@ -57,12 +61,13 @@ export default function TabNavigator() {
           elevation: 0,
         },
         headerTintColor: colors.text,
-        headerShown: route.name !== 'Головна', 
+        headerShown: false, 
       })}
     >
       <Tab.Screen name="Головна" component={DashboardScreen} />
       <Tab.Screen name="Рецепти" component={RecipesScreen} />
       <Tab.Screen name="Покупки" component={ShoppingListsScreen} />
+      <Tab.Screen name="Склад" component={InventoryScreen} />
       <Tab.Screen name="Профіль" component={ProfileScreen} />
     </Tab.Navigator>
   );

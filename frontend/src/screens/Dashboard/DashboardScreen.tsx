@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { getStyles } from './styles';
 
 import { useTheme } from '../../providers/ThemeProvider';
 import { useAppData } from '../../providers/DataProvider';
+import { useAppAlert } from '../../providers/CustomAlertProvider';
+import ActiveMenuWidget, { Dish } from '../../components/ActiveMenuWidget/ActiveMenuWidget';
+import CookDishModal from '../../components/Modals/CookDishModal';
+import ShoppingWidget from '../../components/ShoppingWidget/ShoppingWidget';
 
 export default function DashboardScreen() {
   const { colors } = useTheme();
   const styles = getStyles(colors);
   
   const { user, currentFamily } = useAppData();
+  const { showAlert } = useAppAlert(); 
+
+  const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
+
+const handleOpenCookModal = (dish: Dish) => {
+    setSelectedDish(dish);
+  };
+
+  const handleConfirmCook = (dish: Dish, portionsCooked: number) => {
+    console.log(`Готуємо ${dish.name}, порцій: ${portionsCooked}`);
+    
+    setSelectedDish(null); 
+    showAlert('Смачного! 🍳', `Списано продукти на ${portionsCooked} порц. "${dish.name}"`, 'success');
+  };
 
   return (
+    <>
     <ScrollView 
       style={styles.container} 
       contentContainerStyle={styles.scrollContent}
@@ -38,14 +57,21 @@ export default function DashboardScreen() {
       {/* Тут будуть плашки типу "Меню закінчується завтра" */}
 
       {/* --- 3. БЛОК: ЩО СЬОГОДНІ НА ВЕЧЕРЮ --- */}
-      {/* Тут будуть картки страв на сьогодні з кнопкою "Приготовано" */}
+      <ActiveMenuWidget onCookPress={handleOpenCookModal} />
 
       {/* --- 4. БЛОК: АКТУАЛЬНІ ЗАКУПІВЛІ --- */}
-      {/* Тут буде прогрес-бар поточного списку покупок */}
+      <ShoppingWidget />
 
       {/* --- 5. ШВИДКІ ДІЇ (QUICK ACTIONS) --- */}
       {/* Кнопки "Спланувати меню" або "Створити список" */}
 
-    </ScrollView>
+      </ScrollView>
+      <CookDishModal 
+        visible={!!selectedDish} 
+        dish={selectedDish} 
+        onClose={() => setSelectedDish(null)} 
+        onConfirm={handleConfirmCook} 
+      />
+      </>
   );
 }
