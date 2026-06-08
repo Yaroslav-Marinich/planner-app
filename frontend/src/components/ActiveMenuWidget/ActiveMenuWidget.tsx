@@ -25,23 +25,45 @@ interface ActiveMenuWidgetProps {
   onCookPress: (dish: Dish) => void;
 }
 
-// Фейкові дані для "Розділеного меню"
+// Фейкові дані: Додано БАГАТО інгредієнтів
 const mockDishes: Dish[] = [
   { 
     id: 'd1', name: 'Сирники зі сметаною', portionsPlanned: 2, hasIngredients: true, mealType: 'Сніданок',
-    ingredients: [{ id: 'i1', name: 'Сир', amountPerPortion: 150, unit: 'г', inStock: 500 }]
+    ingredients: [
+      { id: 'i1', name: 'Сир', amountPerPortion: 150, unit: 'г', inStock: 0 }, // 0, щоб спрацювали аналоги зі складу
+      { id: 'i_egg', name: 'Яйця', amountPerPortion: 1, unit: 'шт', inStock: 10 },
+      { id: 'i_flour', name: 'Борошно', amountPerPortion: 30, unit: 'г', inStock: 1000 },
+      { id: 'i_sugar', name: 'Цукор', amountPerPortion: 20, unit: 'г', inStock: 500 },
+      { id: 'i_sourcream', name: 'Сметана', amountPerPortion: 50, unit: 'г', inStock: 200 },
+    ]
   },
   { 
-    id: 'd2', name: 'Борщ український', portionsPlanned: 4, hasIngredients: true, mealType: 'Обід',
-    ingredients: [{ id: 'i2', name: 'Буряк', amountPerPortion: 80, unit: 'г', inStock: 500 }]
+    id: 'd2', name: 'Борщ український', portionsPlanned: 4, hasIngredients: false, mealType: 'Обід',
+    ingredients: [
+      { id: 'i2', name: 'Буряк', amountPerPortion: 80, unit: 'г', inStock: 500 },
+      { id: 'i_cabbage', name: 'Капуста', amountPerPortion: 100, unit: 'г', inStock: 300 },
+      { id: 'i_potato', name: 'Картопля', amountPerPortion: 150, unit: 'г', inStock: 2000 },
+      { id: 'i_carrot', name: 'Морква', amountPerPortion: 50, unit: 'г', inStock: 0 }, // Бракує прямого збігу, але є аналог "Морква мита"
+      { id: 'i_onion', name: 'Цибуля', amountPerPortion: 40, unit: 'г', inStock: 100 },
+      { id: 'i_meat', name: 'М\'ясо', amountPerPortion: 150, unit: 'г', inStock: 0 }, // Працюватиме через аналог "Свинина"
+      { id: 'i_tomato', name: 'Томатна паста', amountPerPortion: 30, unit: 'г', inStock: 100 },
+      { id: 'i_oil', name: 'Олія', amountPerPortion: 15, unit: 'мл', inStock: 800 },
+      { id: 'i_garlic', name: 'Часник', amountPerPortion: 5, unit: 'г', inStock: 50 },
+    ]
   },
   { 
     id: 'd3', name: 'Салат Цезар', portionsPlanned: 2, hasIngredients: false, mealType: 'Обід',
-    ingredients: [{ id: 'i4', name: 'Куряче філе', amountPerPortion: 150, unit: 'г', inStock: 100 }] // Брак
+    ingredients: [
+      { id: 'i_chicken', name: 'Куряче філе', amountPerPortion: 150, unit: 'г', inStock: 100 }, // Брак
+      { id: 'i_lettuce', name: 'Салат Айсберг', amountPerPortion: 100, unit: 'г', inStock: 50 }, // Брак
+    ]
   },
   { 
     id: 'd4', name: 'Кефір та печиво', portionsPlanned: 1, hasIngredients: true, mealType: 'Нічний перекус',
-    ingredients: [{ id: 'i5', name: 'Кефір', amountPerPortion: 200, unit: 'мл', inStock: 1000 }]
+    ingredients: [
+      { id: 'i5', name: 'Кефір', amountPerPortion: 200, unit: 'мл', inStock: 1000 },
+      { id: 'i6', name: 'Печиво', amountPerPortion: 50, unit: 'г', inStock: 300 },
+    ]
   },
 ];
 
@@ -103,7 +125,7 @@ export default function ActiveMenuWidget({ onCookPress }: ActiveMenuWidgetProps)
                 style={styles.cookButtonSm}
                 onPress={() => onCookPress(dish)}
               >
-                <Ionicons name="restaurant" size={20} color={colors.white} />
+                <Ionicons name="restaurant" size={20} color="#FFF" />
               </TouchableOpacity>
             </View>
           ))}

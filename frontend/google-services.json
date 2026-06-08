@@ -1,0 +1,190 @@
+{
+  "project_info": {
+    "project_number": "752552917614",
+    "project_id": "budget-app-32c76",
+    "storage_bucket": "budget-app-32c76.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752552917614:android:1b93e2a124ecb87851447f",
+        "android_client_info": {
+          "package_name": "com.simbudget.budgetapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752552917614-okhj7kb65qhfmlk1jtem7r7vunqn76va.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simbudget.budgetapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "752552917614-v1cgi1jd0trimfdvsfghnmgtakijjh4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simbudget.budgetapp",
+            "certificate_hash": "eaaf62099a721749b34302f698c88fd6aea20c68"
+          }
+        },
+        {
+          "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZo3cFnwICqkQSqkPZaz2bLVBFG5kUaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752552917614:android:d2b8328833d5c52151447f",
+        "android_client_info": {
+          "package_name": "com.simbudget.budgetapp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752552917614-d9v5e7saemfjqh8d6h92bi953c4227la.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simbudget.budgetapp.dev",
+            "certificate_hash": "eaaf62099a721749b34302f698c88fd6aea20c68"
+          }
+        },
+        {
+          "client_id": "752552917614-ee0ieru31osfa36smsieandj59rqt7a1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simbudget.budgetapp.dev",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZo3cFnwICqkQSqkPZaz2bLVBFG5kUaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752552917614:android:376edb7e5506088651447f",
+        "android_client_info": {
+          "package_name": "com.simplaner.planerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752552917614-5q4vl7fchrtmk3qaf88u2l3jbt32k7vv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simplaner.planerapp",
+            "certificate_hash": "eaaf62099a721749b34302f698c88fd6aea20c68"
+          }
+        },
+        {
+          "client_id": "752552917614-ugum3ej442b2amnuj8vr61s93oavrd2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simplaner.planerapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZo3cFnwICqkQSqkPZaz2bLVBFG5kUaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752552917614:android:d314356dda08d0bd51447f",
+        "android_client_info": {
+          "package_name": "com.simplaner.planerapp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752552917614-51f4q91f50ugfnedsge6s72hui7r9nel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simplaner.planerapp.dev",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "752552917614-kq09b1hnndbo0u6e7qptoq36hpeceib7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simplaner.planerapp.dev",
+            "certificate_hash": "eaaf62099a721749b34302f698c88fd6aea20c68"
+          }
+        },
+        {
+          "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZo3cFnwICqkQSqkPZaz2bLVBFG5kUaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752552917614-153vmurcj0hcqviee2le3ikvrg4bmnq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
