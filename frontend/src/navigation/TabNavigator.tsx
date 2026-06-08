@@ -66,7 +66,7 @@ export default function TabNavigator() {
     >
       <Tab.Screen name="Головна" component={DashboardScreen} />
       <Tab.Screen name="Рецепти" component={RecipesScreen} />
-      <Tab.Screen name="Покупки" component={ShoppingListsScreen} />
+      <Tab.Screen name="Покупки" component={ShoppingListDetailScreen} />
       <Tab.Screen name="Склад" component={InventoryScreen} />
       <Tab.Screen name="Профіль" component={ProfileScreen} />
     </Tab.Navigator>
