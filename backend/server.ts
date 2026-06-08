@@ -68,7 +68,8 @@ app.get('/api/protected', verifyToken, (req: AuthRequest, res: Response) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
-  console.log(`🚀 Сервер запущено на порту ${PORT}`);
+const PORT = Number(process.env.PORT) || 5000;
+
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Сервер запущено на порту ${PORT} (відкритий для локальної мережі)`);
 });
